@@ -1,0 +1,155 @@
+{
+  "nodes": {
+    "firefox-addons": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "pkgs/firefox-addons",
+        "lastModified": 1723176196,
+        "narHash": "sha256-8FWJ0kJN6yin5Z9BhtPlVaRzj9ljuUdaBT2i/bquJO4=",
+        "owner": "rycee",
+        "repo": "nur-expressions",
+        "rev": "ce877fc7a74fb1abfedcdb4f78e67d930a0841c8",
+        "type": "gitlab"
+      },
+      "original": {
+        "dir": "pkgs/firefox-addons",
+        "owner": "rycee",
+        "repo": "nur-expressions",
+        "type": "gitlab"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1629284811,
+        "narHash": "sha256-JHgasjPR0/J1J3DRm4KxM4zTyAj4IOJY8vIl75v/kPI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c5d161cc0af116a2e17f54316f0bf43f0819785c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1721852138,
+        "narHash": "sha256-JH8N5uoqoVA6erV4O40VtKKHsnfmhvMGbxMNDLtim5o=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "304a011325b7ac7b8c9950333cd215a7aa146b0e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1721924956,
+        "narHash": "sha256-Sb1jlyRO+N8jBXEX9Pg9Z1Qb8Bw9QyOgLDNMEpmjZ2M=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "5ad6a14c6bf098e98800b091668718c336effc95",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "plugin-fidget": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720885602,
+        "narHash": "sha256-fjxdRN08BMU7jTWdhdzh8kW18ZURS9SJCwnTxuz6aFE=",
+        "owner": "j-hui",
+        "repo": "fidget.nvim",
+        "rev": "d855eed8a06531a7e8fd0684889b2943f373c469",
+        "type": "github"
+      },
+      "original": {
+        "owner": "j-hui",
+        "repo": "fidget.nvim",
+        "type": "github"
+      }
+    },
+    "plugin-gitsigns": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1721914876,
+        "narHash": "sha256-nHUQoYo/4J2rh494UxYz3hqrrgPSxX4IgManKxCsBR8=",
+        "owner": "lewis6991",
+        "repo": "gitsigns.nvim",
+        "rev": "f074844b60f9e151970fbcdbeb8a2cd52b6ef25a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lewis6991",
+        "repo": "gitsigns.nvim",
+        "type": "github"
+      }
+    },
+    "plugin-kubectlnvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1723229555,
+        "narHash": "sha256-eFwbJJX+dKODv9CDgNa21xbZGH2mIrQFVaJ3Z6Kw1Sc=",
+        "owner": "Ramilito",
+        "repo": "kubectl.nvim",
+        "rev": "7c27afeda27a2befc0afbf35788b1cc4932728bd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Ramilito",
+        "repo": "kubectl.nvim",
+        "type": "github"
+      }
+    },
+    "plugin-whichkey": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1721858377,
+        "narHash": "sha256-nv9s4/ax2BoL9IQdk42uN7mxIVFYiTK+1FVvWDKRnGM=",
+        "owner": "folke",
+        "repo": "which-key.nvim",
+        "rev": "6c1584eb76b55629702716995cca4ae2798a9cca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "which-key.nvim",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "firefox-addons": "firefox-addons",
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs",
+        "plugin-fidget": "plugin-fidget",
+        "plugin-gitsigns": "plugin-gitsigns",
+        "plugin-kubectlnvim": "plugin-kubectlnvim",
+        "plugin-whichkey": "plugin-whichkey"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
