@@ -17,24 +17,11 @@ in
       gnomeExtensions.emoji-copy
       gnomeExtensions.unite
       pinentry-gnome3
-
       (writeShellScriptBin "tpass" (builtins.readFile ./scripts/shell/tpass.sh))
       (writeShellScriptBin "vimclip" (builtins.readFile ./scripts/shell/vimclip.sh))
       (writers.writeBashBin "ts" { } (builtins.readFile ./scripts/shell/ts.sh))
 
     ];
-  };
-
-  programs.gpg.enable = true;
-
-  # Might need gpgconf --reload gpg-agent
-  # https://github.com/NixOS/nixpkgs/issues/35464
-  services.gpg-agent = {
-    enable = true;
-    defaultCacheTtl = 34560000;
-    maxCacheTtl = 34560000;
-    enableScDaemon = false;
-    pinentryPackage = pkgs.pinentry-gnome3;
   };
 
   programs.firefox = {
@@ -101,7 +88,10 @@ in
     enable = true;
   };
 
-  imports = [ ./modulesHm/bundles/terminal.nix ];
+  imports = [
+    ./modulesHm/bundles/terminal.nix
+    ./modulesHm/bundles/auth.nix
+  ];
   ft.bash.TSPATH = "~/repo/:/etc/nixos";
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

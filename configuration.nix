@@ -123,7 +123,7 @@
     yq
     sxiv
     wl-clipboard
-    pass
+    # pass
     gparted
     vlc
     kind
