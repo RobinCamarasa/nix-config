@@ -65,11 +65,9 @@
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
     # # environment:
-    (pkgs.writeShellScriptBin "tpass" ''
-      pass -c $(find ~/.password-store/ -name '*.gpg' | sed -e 's:^.*password-store/\(.*\).gpg$:\1:g' | fzf)
-    '')
-    (pkgs.writeShellScriptBin "vimclip" (builtins.readFile ./shell/vimclip.sh))
-    (pkgs.writers.writeBashBin "ts" { } (builtins.readFile ./shell/ts.sh))
+    (pkgs.writeShellScriptBin "tpass" (builtins.readFile ./scripts/shell/tpass.sh))
+    (pkgs.writeShellScriptBin "vimclip" (builtins.readFile ./scripts/shell/vimclip.sh))
+    (pkgs.writers.writeBashBin "ts" { } (builtins.readFile ./scripts/shell/ts.sh))
 
   ];
 
@@ -118,26 +116,26 @@
         ripgrep
       ];
       extraLuaConfig = ''
-        ${builtins.readFile ./nvim/vim-basic.lua}
+        ${builtins.readFile ./programs/nvim/vim-basic.lua}
       '';
       plugins = with pkgs.vimPlugins; [
         {
           plugin = own-whichkey;
-          config = toLuaFile ./nvim/plugins/which-key.lua;
+          config = toLuaFile ./programs/nvim/plugins/which-key.lua;
         }
         {
           plugin = nvim-cmp;
-          config = toLuaFile ./nvim/plugins/nvim-cmp.lua;
+          config = toLuaFile ./programs/nvim/plugins/nvim-cmp.lua;
         }
         neodev-nvim # LSP essential
         cmp-nvim-lsp # LSP essential
         {
           plugin = nvim-lspconfig;
-          config = toLuaFile ./nvim/plugins/lsp.lua;
+          config = toLuaFile ./programs/nvim/plugins/lsp.lua;
         }
         {
           plugin = conform-nvim;
-          config = toLuaFile ./nvim/plugins/conform.lua;
+          config = toLuaFile ./programs/nvim/plugins/conform.lua;
         }
 
         {
@@ -147,32 +145,32 @@
         nvim-web-devicons
         {
           plugin = telescope-fzf-native-nvim;
-          config = toLuaFile ./nvim/plugins/telescope.lua;
+          config = toLuaFile ./programs/nvim/plugins/telescope.lua;
         }
         {
           plugin = telescope-symbols-nvim;
-          config = toLuaFile ./nvim/plugins/telescope-symbols.lua;
+          config = toLuaFile ./programs/nvim/plugins/telescope-symbols.lua;
         }
         vim-sleuth
         {
           plugin = own-kubectlnvim;
-          config = toLuaFile ./nvim/plugins/kubectlnvim.lua;
+          config = toLuaFile ./programs/nvim/plugins/kubectlnvim.lua;
         }
         {
           plugin = mini-nvim;
-          config = toLuaFile ./nvim/plugins/mini-nvim.lua;
+          config = toLuaFile ./programs/nvim/plugins/mini-nvim.lua;
         }
         {
           plugin = oil-nvim;
-          config = toLuaFile ./nvim/plugins/nvim-oil.lua;
+          config = toLuaFile ./programs/nvim/plugins/nvim-oil.lua;
         }
         {
           plugin = own-gitsigns;
-          config = toLuaFile ./nvim/plugins/gitsigns.lua;
+          config = toLuaFile ./programs/nvim/plugins/gitsigns.lua;
         }
         {
           plugin = vim-fugitive;
-          config = toLuaFile ./nvim/plugins/vim-fugitive.lua;
+          config = toLuaFile ./programs/nvim/plugins/vim-fugitive.lua;
         }
         {
           plugin = (
@@ -187,7 +185,7 @@
               p.tree-sitter-yaml
             ])
           );
-          config = toLuaFile ./nvim/plugins/nvim-treesitter.lua;
+          config = toLuaFile ./programs/nvim/plugins/nvim-treesitter.lua;
         }
         plenary-nvim
       ];
