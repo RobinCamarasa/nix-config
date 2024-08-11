@@ -16,10 +16,6 @@
     inputs.home-manager.nixosModules.default
   ];
 
-  # stylix.enable = true;
-  # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-moon.yaml";
-  # stylix.image = ./nix-wallpaper-simple-blue.png;
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -65,7 +61,6 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.windowManager.qtile.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {

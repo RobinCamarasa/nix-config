@@ -7,6 +7,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Vim plugins
     plugin-kubectlnvim = {
       url = "github:Ramilito/kubectl.nvim";
       flake = false;
@@ -24,6 +26,7 @@
       flake = false;
     };
 
+    # Firefox addons
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
