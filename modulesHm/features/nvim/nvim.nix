@@ -13,6 +13,7 @@ in
     ft.nvim.enable = lib.mkEnableOption "enables neovim";
   };
   config = lib.mkIf config.ft.nvim.enable {
+    home.packages = [ (pkgs.writeShellScriptBin "vimclip" (builtins.readFile ./sh/vimclip.sh)) ];
 
     nixpkgs.overlays = [
       (hlp.vim.makeOverlay [

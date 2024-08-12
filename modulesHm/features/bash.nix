@@ -14,6 +14,7 @@
     };
   };
   config = {
+    home.packages = lib.mkIf config.ft.bash.enable [ pkgs.neofetch ];
     programs.bash = lib.mkIf config.ft.bash.enable {
       enable = true;
       enableCompletion = true;
