@@ -10,6 +10,12 @@
   };
   config = {
     programs.gpg.enable = config.ft.pass.enable;
+    home.packages = lib.mkIf config.ft.pass.enable [
+      pkgs.fzf
+      pkgs.wl-clipboard
+      (pkgs.writeShellScriptBin "tpass" (builtins.readFile ./tpass.sh))
+    ];
+
     programs.password-store = {
       enable = config.ft.pass.enable;
       settings = lib.mkIf config.ft.pass.enable { PASSWORD_STORE_DIR = "$HOME/.password-store"; };

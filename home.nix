@@ -14,10 +14,8 @@ in
     packages = with pkgs; [
       neofetch
       gcc
-      (writeShellScriptBin "tpass" (builtins.readFile ./scripts/shell/tpass.sh))
       (writeShellScriptBin "vimclip" (builtins.readFile ./scripts/shell/vimclip.sh))
       (writers.writeBashBin "ts" { } (builtins.readFile ./scripts/shell/ts.sh))
-
     ];
   };
 
