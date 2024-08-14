@@ -74,7 +74,17 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
+  security.sudo.extraRules = [
+    {
+      users = [ "robincamarasa" ];
+      commands = [
+        {
+          command = "ALL";
+          options = [ "NOPASSWD" ]; # "SETENV" # Adding the following could be a good idea
+        }
+      ];
+    }
+  ];
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -115,8 +125,11 @@
     # pass
     gparted
     vlc
+
     kind
     kubectl
+
+    texliveFull
   ];
 
   virtualisation.docker.enable = true;
