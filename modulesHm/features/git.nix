@@ -23,6 +23,13 @@
       enable = true;
       userEmail = config.ft.git.userEmail;
       userName = config.ft.git.userName;
+      aliases = {
+        lg = "log --graph --all";
+        rmt = "remote -v";
+      };
+      extraConfig = {
+        push.autoSetupRemote = true;
+      };
     };
   };
 }

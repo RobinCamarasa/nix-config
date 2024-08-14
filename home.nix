@@ -8,14 +8,12 @@ let
   hlp = import ./utils/helpers.nix { inherit inputs; };
 in
 {
-  home = hlp.main.makeHome {
-    username = "robincamarasa";
-    file = { };
-  };
+  home = hlp.main.makeHome { username = "robincamarasa"; };
 
   imports = [
     ./modulesHm/bundles/auth.nix
     ./modulesHm/bundles/gui.nix
+    ./modulesHm/bundles/dev.nix
     ./modulesHm/bundles/terminal.nix
   ];
   ft.bash.TSPATH = "~/repo/:/etc/nixos";

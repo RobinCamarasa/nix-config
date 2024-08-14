@@ -26,6 +26,7 @@
       '';
       shellAliases = {
         svi = "sudo -E -s nvim";
+        sgit = "sudo -E -s git";
       };
     };
   };
