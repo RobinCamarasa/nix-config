@@ -23,6 +23,7 @@
       enable = true;
       userEmail = config.ft.git.userEmail;
       userName = config.ft.git.userName;
+      ignores = [ ".envrc" ];
       aliases = {
         lg = "log --graph --all";
         rmt = "remote -v";
