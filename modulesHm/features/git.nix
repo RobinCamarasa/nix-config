@@ -27,6 +27,8 @@
       aliases = {
         lg = "log --graph --all";
         rmt = "remote -v";
+        url = "!f() { git remote -v | head -n1 | awk '{print $2}' | sed  -e 's#\.git$##g' -e 's#:#/#g' -e 's#^git@#https://#' | tee >(wl-copy); }; f";
+        # "git remote -v | head -n1 | awk '{print $2}' | sed  -e 's#\.git$##g' -e 's#:#/#g' -e 's#^git@#https://#' | tee >(wl-copy)"
       };
       extraConfig = {
         push.autoSetupRemote = true;
