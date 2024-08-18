@@ -7,5 +7,10 @@
 }:
 {
   imports = [ ../features/pass/pass.nix ];
-  ft.pass.enable = lib.mkDefault true;
+  options = {
+    bd.auth.enable = lib.mkEnableOption "enables auth";
+  };
+  config = {
+    ft.pass.enable = lib.mkDefault config.bd.auth.enable;
+  };
 }

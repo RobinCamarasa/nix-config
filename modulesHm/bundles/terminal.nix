@@ -7,5 +7,10 @@
 }:
 {
   imports = [ ../features/ncspot.nix ];
-  ft.ncspot.enable = lib.mkDefault true;
+  options = {
+    bd.terminal.enable = lib.mkEnableOption "enables terminal";
+  };
+  config = {
+    ft.ncspot.enable = lib.mkDefault config.bd.terminal.enable;
+  };
 }

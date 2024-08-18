@@ -17,14 +17,19 @@
     ../features/bash.nix
     ../features/zoxide.nix
   ];
-  ft.yazi.enable = lib.mkDefault true;
-  ft.starship.enable = lib.mkDefault true;
-  ft.direnv.enable = lib.mkDefault true;
-  ft.nvim.enable = lib.mkDefault true;
-  ft.tmux.enable = lib.mkDefault true;
-  ft.tmux.main = lib.mkDefault false;
-  ft.git.enable = lib.mkDefault true;
-  ft.bash.enable = lib.mkDefault true;
-  ft.zoxide.enable = lib.mkDefault true;
-  ft.atuin.enable = lib.mkDefault true;
+  options = {
+    bd.dev.enable = lib.mkEnableOption "enables dev";
+  };
+  config = {
+    ft.yazi.enable = lib.mkDefault config.bd.dev.enable;
+    ft.starship.enable = lib.mkDefault config.bd.dev.enable;
+    ft.direnv.enable = lib.mkDefault config.bd.dev.enable;
+    ft.nvim.enable = lib.mkDefault config.bd.dev.enable;
+    ft.tmux.enable = lib.mkDefault config.bd.dev.enable;
+    ft.tmux.main = lib.mkDefault false;
+    ft.git.enable = lib.mkDefault config.bd.dev.enable;
+    ft.bash.enable = lib.mkDefault config.bd.dev.enable;
+    ft.zoxide.enable = lib.mkDefault config.bd.dev.enable;
+    ft.atuin.enable = lib.mkDefault config.bd.dev.enable;
+  };
 }
