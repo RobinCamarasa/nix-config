@@ -15,6 +15,7 @@
   boot.initrd.availableKernelModules = [
     "xhci_pci"
     "nvme"
+    "usbhid"
     "usb_storage"
     "sd_mod"
   ];
@@ -23,14 +24,14 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/9dec922f-fc68-412a-a7cc-36fd3fa6f361";
+    device = "/dev/disk/by-uuid/e39a2310-12c7-4fa4-a16c-6eb523fcccbf";
     fsType = "ext4";
   };
 
-  boot.initrd.luks.devices."luks-d84bdc50-fc7f-4571-88d3-636c0e312de2".device = "/dev/disk/by-uuid/d84bdc50-fc7f-4571-88d3-636c0e312de2";
+  boot.initrd.luks.devices."luks-fd9f4f74-293f-4775-9a4b-1cf495cf069f".device = "/dev/disk/by-uuid/fd9f4f74-293f-4775-9a4b-1cf495cf069f";
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/9D01-77D8";
+    device = "/dev/disk/by-uuid/1E62-EC0D";
     fsType = "vfat";
     options = [
       "fmask=0022"
