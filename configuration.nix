@@ -137,8 +137,8 @@
 
     gcc
     cargo
+    cargo-watch
     trunk
-    rustup
 
     poetry # to be continued
     stdenv.cc.cc.lib
