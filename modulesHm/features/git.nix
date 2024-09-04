@@ -31,6 +31,7 @@
       };
       extraConfig = {
         push.autoSetupRemote = true;
+        pull.rebase = false;
       };
     };
   };

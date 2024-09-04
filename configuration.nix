@@ -15,6 +15,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.cleanTmpDir = true;
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -42,6 +43,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.ollama.enable = true;
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -122,12 +124,25 @@
     yq
     sxiv
     wl-clipboard
-    # pass
+
+    qrencode
+    poppler_utils
+    pandoc
+
     gparted
     vlc
 
     kind
     kubectl
+
+    gcc
+    cargo
+    trunk
+    rustup
+
+    poetry # to be continued
+    stdenv.cc.cc.lib
+    zlib # numpy
 
     texliveFull
   ];

@@ -31,6 +31,10 @@ in
         luajitPackages.lua-lsp
         pyright
         nixfmt-rfc-style
+        htmx-lsp
+        # rust-src
+        rust-analyzer
+
         stylua
         isort
         black

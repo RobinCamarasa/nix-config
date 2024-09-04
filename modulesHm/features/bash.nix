@@ -23,6 +23,8 @@
         clear
         neofetch
         export TSPATH="${config.ft.bash.TSPATH}"
+        export LD_LIBRARY_PATH="${pkgs.zlib.outPath}/lib:$LD_LIBRARY_PATH" # numpy
+        export LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib.outPath}/lib:$LD_LIBRARY_PATH" # numpy
       '';
       shellAliases = {
         svi = "sudo -E -s nvim";
