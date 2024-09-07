@@ -145,6 +145,7 @@
     zlib # numpy
 
     texliveFull
+    helvum
   ];
 
   virtualisation.docker.enable = true;
