@@ -8,13 +8,13 @@
   options = {
     ft.git.enable = lib.mkEnableOption "enables git";
     ft.git.userEmail = lib.mkOption {
-      default = "robin.camarasa@pm.me";
-      type = pkgs.lib.types.string;
+      default = "robin.camarasa@gmail.com";
+      type = pkgs.lib.types.str;
       description = "set git userEmail";
     };
     ft.git.userName = lib.mkOption {
       default = "RobinCamarasa";
-      type = pkgs.lib.types.string;
+      type = pkgs.lib.types.str;
       description = "set git userName";
     };
   };
@@ -27,11 +27,14 @@
       aliases = {
         lg = "log --graph --all";
         rmt = "remote -v";
-        url = "!f() { git remote -v | head -n1 | awk '{print $2}' | sed  -e 's#\.git$##g' -e 's#:#/#g' -e 's#^git@#https://#' | tee >(wl-copy); }; f";
+        url = "!f() { git remote -v | head -n1 | awk '{print $2}' | sed  -e 's#\.git$##g' -e 's#:#/#g' -e 's#^git@#https://#' | head -n1 | tee >(wl-copy); }; f";
       };
       extraConfig = {
+        commit.gpgsign = true;
         push.autoSetupRemote = true;
         pull.rebase = false;
+        safe.directory = "/etc/nixos";
+        user.signingkey = "0x9338E24F30722AD8";
       };
     };
   };
