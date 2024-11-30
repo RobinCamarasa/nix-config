@@ -52,3 +52,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 --[[ Filetype ]]
 vim.cmd([[autocmd! BufRead,BufNewFile *.puml set filetype=puml]])
+
+-- Set indentation for Python files
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "roc",
+	callback = function()
+		vim.bo.tabstop = 4
+		vim.bo.shiftwidth = 4
+		vim.bo.expandtab = true
+	end,
+})

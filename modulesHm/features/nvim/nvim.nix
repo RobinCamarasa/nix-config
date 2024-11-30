@@ -28,16 +28,25 @@ in
       vimAlias = true;
       vimdiffAlias = true;
       extraPackages = with pkgs; [
-        luajitPackages.lua-lsp
-        pyright
-        nixfmt-rfc-style
+        # htmx
         htmx-lsp
-        # rust-src
+
+        # Nix
+        nixfmt-rfc-style
+        nixd
+
+        # Lua
+        luajitPackages.lua-lsp
+
+        # Rust
         rust-analyzer
 
+        # Python
+        pyright
         stylua
         isort
         black
+
         xclip
         wl-clipboard
         ripgrep
@@ -79,10 +88,10 @@ in
           config = hlp.vim.toLuaFile ./plugins/telescope-symbols.lua;
         }
         vim-sleuth
-        {
-          plugin = own-kubectlnvim;
-          config = hlp.vim.toLuaFile ./plugins/kubectlnvim.lua;
-        }
+        # {
+        #   plugin = own-kubectlnvim;
+        #   config = hlp.vim.toLuaFile ./plugins/kubectlnvim.lua;
+        # }
         {
           plugin = mini-nvim;
           config = hlp.vim.toLuaFile ./plugins/mini-nvim.lua;
@@ -110,6 +119,7 @@ in
               p.tree-sitter-python
               p.tree-sitter-json
               p.tree-sitter-yaml
+              p.tree-sitter-roc
             ])
           );
           config = hlp.vim.toLuaFile ./plugins/nvim-treesitter.lua;

@@ -87,6 +87,11 @@ require("lspconfig").rust_analyzer.setup({
 	},
 })
 
+require("lspconfig").nixd.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 --
 -- require('lspconfig').rnix.setup {
 --     on_attach = on_attach,
