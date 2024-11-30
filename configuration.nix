@@ -15,7 +15,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.cleanTmpDir = true;
+  boot.tmp.cleanOnBoot = true;
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -113,7 +113,7 @@
     wget
     gnumake
     inkscape-with-extensions
-    inconsolata-nerdfont
+    nerd-fonts.inconsolata
     htop
     btop
     dust
@@ -146,6 +146,19 @@
 
     texliveFull
     helvum
+
+    ghc
+
+    # networkmanager-openconnect
+    # gnome.networkmanager-openconnect
+
+    gh
+    glab
+
+    go
+
+    libreoffice-qt
+    brave
   ];
 
   virtualisation.docker.enable = true;
