@@ -9,7 +9,7 @@
     ft.bash.enable = lib.mkEnableOption "enables bash";
     ft.bash.TSPATH = lib.mkOption {
       default = "/etc/nixos";
-      type = pkgs.lib.types.string;
+      type = pkgs.lib.types.str;
       description = "set TSPATH variable";
     };
   };
@@ -19,9 +19,8 @@
       enable = true;
       enableCompletion = true;
       bashrcExtra = ''
-        export PATH="$PATH:./"
+        export PATH="$HOME/.local/bin:$PATH:./"
         clear
-        neofetch
         export TSPATH="${config.ft.bash.TSPATH}"
         export LD_LIBRARY_PATH="${pkgs.zlib.outPath}/lib:$LD_LIBRARY_PATH" # numpy
         export LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib.outPath}/lib:$LD_LIBRARY_PATH" # numpy
