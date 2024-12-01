@@ -110,55 +110,70 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wget
-    gnumake
-    inkscape-with-extensions
+    # Fonts
     nerd-fonts.inconsolata
-    htop
-    btop
+
+    # CLI
+    ## Essentials
+    wget
+    html-xml-utils
+    gparted
     dust
     tldr
     fzf
-    tailscale
+    ## Parsing
     jq
     yq
-    sxiv
-    wl-clipboard
-
     qrencode
-    poppler_utils
     pandoc
+    poppler_utils
+    ## Services
+    tailscale
 
-    gparted
+    # TUI
+    btop
+
+    # GUI
+    ## Clipboard
+    wl-clipboard
+    ## Documents
+    libreoffice-qt
+    ## Design
+    inkscape-with-extensions
+    gimp
+    ## Media
     vlc
-
-    kind
-    kubectl
-
-    gcc
-    cargo
-    cargo-watch
-    trunk
-
-    poetry # to be continued
-    stdenv.cc.cc.lib
-    zlib # numpy
-
-    texliveFull
+    sxiv
+    ## Browser
+    brave
+    ## Sound
     helvum
 
-    ghc
-
-    # networkmanager-openconnect
-    # gnome.networkmanager-openconnect
-
+    # Dev
+    ## Tools
     gh
     glab
-
+    kubectl
+    ## C
+    gnumake
+    gcc
+    ## Dhall
+    dhall
+    dhall-json
+    dhall-yaml
+    ## Go
     go
-
-    libreoffice-qt
-    brave
+    ## Rust
+    cargo
+    cargo-watch
+    ## Haskell
+    ghc
+    ## Python
+    poetry
+    stdenv.cc.cc.lib
+    zlib # numpy
+    ## Latex
+    texliveFull
   ];
 
   virtualisation.docker.enable = true;
