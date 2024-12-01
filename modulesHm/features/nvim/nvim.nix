@@ -28,6 +28,9 @@ in
       vimAlias = true;
       vimdiffAlias = true;
       extraPackages = with pkgs; [
+        # dhall
+        dhall-lsp-server
+
         # htmx
         htmx-lsp
 
@@ -120,6 +123,7 @@ in
               p.tree-sitter-json
               p.tree-sitter-yaml
               p.tree-sitter-roc
+              p.tree-sitter-dhall
             ])
           );
           config = hlp.vim.toLuaFile ./plugins/nvim-treesitter.lua;
