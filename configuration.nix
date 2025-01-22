@@ -121,6 +121,7 @@
     dust
     tldr
     fzf
+    man-pages
     ## Parsing
     jq
     yq
@@ -174,6 +175,10 @@
     zlib # numpy
     ## Latex
     texliveFull
+
+    # Virtualization
+    qemu
+    quickemu
   ];
 
   virtualisation.docker.enable = true;
