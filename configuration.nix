@@ -133,6 +133,8 @@
 
     # TUI
     btop
+    lazydocker
+    presenterm
 
     # GUI
     ## Clipboard
@@ -158,6 +160,7 @@
     ## C
     gnumake
     gcc
+    gdb
     ## Dhall
     dhall
     dhall-json
@@ -167,6 +170,8 @@
     ## Rust
     cargo
     cargo-watch
+    rustup
+    rust-analyzer
     ## Haskell
     ghc
     ## Python
