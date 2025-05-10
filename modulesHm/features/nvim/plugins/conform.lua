@@ -8,6 +8,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		python = { "isort", "black" },
 		nix = { "nixfmt" },
-		nix = { "rustfmt" },
+		rust = { "rustfmt" },
+		go = { "gofmt" },
 	},
 })

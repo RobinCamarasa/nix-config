@@ -45,6 +45,9 @@ in
         rust-analyzer
         rustfmt
 
+        # go
+        gopls
+
         # Python
         pyright
         stylua
@@ -92,10 +95,6 @@ in
           config = hlp.vim.toLuaFile ./plugins/telescope-symbols.lua;
         }
         vim-sleuth
-        # {
-        #   plugin = own-kubectlnvim;
-        #   config = hlp.vim.toLuaFile ./plugins/kubectlnvim.lua;
-        # }
         {
           plugin = mini-nvim;
           config = hlp.vim.toLuaFile ./plugins/mini-nvim.lua;
