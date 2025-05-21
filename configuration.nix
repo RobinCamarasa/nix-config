@@ -133,8 +133,8 @@
 
     # TUI
     btop
-    lazydocker
     presenterm
+    k9s
 
     # GUI
     ## Clipboard
@@ -165,6 +165,8 @@
     dhall
     dhall-json
     dhall-yaml
+    ## Java
+    jdk8
     ## Go
     go
     ## Rust
@@ -178,13 +180,21 @@
     poetry
     stdenv.cc.cc.lib
     zlib # numpy
+    python3
     ## Latex
     texliveFull
+    ## js
+    bun
 
     # Virtualization
     qemu
     quickemu
   ];
+
+  programs.java = {
+    enable = true;
+    package = pkgs.jre8;
+  };
 
   virtualisation.docker.enable = true;
   services.openssh.enable = true;
