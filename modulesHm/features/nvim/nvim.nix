@@ -70,6 +70,13 @@ in
           plugin = nvim-cmp;
           config = hlp.vim.toLuaFile ./plugins/nvim-cmp.lua;
         }
+        vim-dadbod
+        vim-dadbod-ui
+        rest-nvim
+        {
+          plugin = harpoon2;
+          config = hlp.vim.toLuaFile ./plugins/nvim-harpoon.lua;
+        }
         neodev-nvim # LSP essential
         cmp-nvim-lsp # LSP essential
         {
