@@ -30,11 +30,9 @@
         url = "!f() { git remote -v | head -n1 | awk '{print $2}' | sed  -e 's#\.git$##g' -e 's#:#/#g' -e 's#^git@#https://#' | head -n1 | tee >(wl-copy); }; f";
       };
       extraConfig = {
-        commit.gpgsign = true;
         push.autoSetupRemote = true;
         pull.rebase = false;
         safe.directory = "/etc/nixos";
-        user.signingkey = "0x9338E24F30722AD8";
       };
     };
   };
