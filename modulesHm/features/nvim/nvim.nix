@@ -18,7 +18,6 @@ in
     nixpkgs.overlays = [
       (hlp.vim.makeOverlay [
         "gitsigns"
-        "kubectlnvim"
         "whichkey"
       ])
     ];
@@ -47,6 +46,7 @@ in
 
         # go
         gopls
+        delve
 
         # Python
         pyright
@@ -83,6 +83,15 @@ in
           plugin = nvim-lspconfig;
           config = hlp.vim.toLuaFile ./plugins/lsp.lua;
         }
+
+        nvim-nio
+        nvim-dap-ui
+        nvim-dap-virtual-text
+        nvim-dap-go
+        {
+          plugin = nvim-dap;
+          config = hlp.vim.toLuaFile ./plugins/nvim-dap.lua;
+        }
         {
           plugin = conform-nvim;
           config = hlp.vim.toLuaFile ./plugins/conform.lua;
@@ -93,6 +102,7 @@ in
           config = "colorscheme tokyonight-night";
         }
         nvim-web-devicons
+        telescope-ui-select-nvim
         {
           plugin = telescope-fzf-native-nvim;
           config = hlp.vim.toLuaFile ./plugins/telescope.lua;
@@ -131,6 +141,7 @@ in
               p.tree-sitter-yaml
               p.tree-sitter-roc
               p.tree-sitter-dhall
+              p.tree-sitter-go
             ])
           );
           config = hlp.vim.toLuaFile ./plugins/nvim-treesitter.lua;
