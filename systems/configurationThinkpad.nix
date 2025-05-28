@@ -8,7 +8,7 @@
 {
   imports = [
     # Include the results of the hardware scan.
-    ./hardware-configuration.nix
+    ./hardware-configurationThinkpad.nix
     inputs.home-manager.nixosModules.default
   ];
 
@@ -213,7 +213,7 @@
       inherit inputs;
     };
     users = {
-      "robincamarasa" = import ./home.nix;
+      "robincamarasa" = import ../homes/homeThinkpad.nix;
     };
   };
 }

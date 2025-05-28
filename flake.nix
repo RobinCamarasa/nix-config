@@ -41,7 +41,7 @@
           inherit inputs;
         };
         modules = [
-          ./configuration.nix
+          ./systems/configurationThinkpad.nix
           inputs.home-manager.nixosModules.default
         ];
       };
