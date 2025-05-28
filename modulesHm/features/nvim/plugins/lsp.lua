@@ -1,10 +1,5 @@
---[[ vim simple extensions ]]
--- vim.keymap.set('n', '<leader>de', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
---
--- [[ vim lsp keymap ]]
-
 require("which-key").add({
-	{ "<leader>l", group = "[L]SP" },
+	{ "<leader>l", group = "[l]sp" },
 })
 --
 
@@ -26,43 +21,15 @@ local on_attach = function(_, bufnr)
 	vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
 		vim.lsp.buf.format()
 	end, {})
-
-	-- -- The following two autocommands are used to highlight references of the
-	-- -- word under your cursor when your cursor rests there for a little while.
-	-- --    See `:help CursorHold` for information about when this is executed
-	-- --
-	-- -- When you move your cursor, the highlights will be cleared (the second autocommand).
-	-- local client = vim.lsp.get_client_by_id(event.data.client_id)
-	-- if client and client.server_capabilities.documentHighlightProvider then
-	--   vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
-	--     buffer = event.buf,
-	--     callback = vim.lsp.buf.document_highlight,
-	--   })
-	--
-	--   vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
-	--     buffer = event.buf,
-	--     callback = vim.lsp.buf.clear_references,
-	--   })
-	-- end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
--- require('neodev').setup()
 require("lspconfig").lua_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	cmd = { "lua-lsp" },
-	-- root_dir = function()
-	-- 	return vim.loop.cwd()
-	-- end,
-	-- settings = {
-	-- 	Lua = {
-	-- 		workspace = { checkThirdParty = false },
-	-- 		telemetry = { enable = false },
-	-- 	},
-	-- }
 })
 
 require("lspconfig").pyright.setup({
@@ -101,9 +68,3 @@ require("lspconfig").gopls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
-
---
--- require('lspconfig').rnix.setup {
---     on_attach = on_attach,
---     capabilities = capabilities,
--- }
