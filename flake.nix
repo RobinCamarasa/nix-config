@@ -45,5 +45,14 @@
           inputs.home-manager.nixosModules.default
         ];
       };
+      nixosConfigurations.tnoWsl = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          ./systems/configurationTnoWsl.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
 }
