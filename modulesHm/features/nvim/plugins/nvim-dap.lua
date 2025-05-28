@@ -16,21 +16,25 @@ dap.adapters.go = {
 	},
 }
 
-vim.keymap.set("n", "<space>ab", dap.toggle_breakpoint)
-vim.keymap.set("n", "<space>ac", dap.run_to_cursor)
+vim.keymap.set("n", "<space>ab", dap.toggle_breakpoint, { desc = "d[a]p toggle [b]reakpoint" })
+vim.keymap.set("n", "<space>ac", dap.run_to_cursor, { desc = "d[a]p run to [c]ursor" })
 
 -- Eval var under cursor
 vim.keymap.set("n", "<leader>aa", function()
 	require("dapui").eval(nil, { enter = true })
-end)
+end, { desc = "d[a]p inspect variable content ([a])" })
 
-vim.keymap.set("n", "<leader>aj", dap.continue)
-vim.keymap.set("n", "<leader>aJ", dap.step_into)
-vim.keymap.set("n", "<leader>al", dap.step_over)
-vim.keymap.set("n", "<leader>aL", dap.step_out)
-vim.keymap.set("n", "<leader>ah", dap.step_back)
-vim.keymap.set("n", "<leader>ar", dap.restart)
-vim.keymap.set("n", "<leader>aq", dap.disconnect)
+require("which-key").add({
+	{ "<leader>a", group = "d[a]p" },
+})
+
+vim.keymap.set("n", "<leader>aj", dap.continue, { desc = "d[a]p continue ([j])" })
+vim.keymap.set("n", "<leader>aJ", dap.step_into, { desc = "d[a]p step into ([J])" })
+vim.keymap.set("n", "<leader>al", dap.step_over, { desc = "d[a]p step over ([l])" })
+vim.keymap.set("n", "<leader>aL", dap.step_out, { desc = "d[a]p step out ([L])" })
+vim.keymap.set("n", "<leader>ah", dap.step_back, { desc = "d[a]p step back ([h])" })
+vim.keymap.set("n", "<leader>ar", dap.restart, { desc = "d[a]p [r]estart" })
+vim.keymap.set("n", "<leader>aq", dap.disconnect, { desc = "d[a]p [q]uit" })
 
 dap.listeners.before.attach.dapui_config = function()
 	ui.open()

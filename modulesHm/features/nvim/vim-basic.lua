@@ -37,6 +37,9 @@ vim.keymap.set("n", "<leader>gc", "<CMD>Git commit<CR>", { desc = "[g]it [c]ommi
 vim.keymap.set("n", "<leader>ga", "<CMD>Git add %<CR>", { desc = "[g]it [a]dd current buffer" })
 
 -- [[ Leader Keymaps ]]
+require("which-key").add({
+	{ "<leader>d", group = "[d]iagnostic" },
+})
 vim.keymap.set("n", "<leader>de", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>dq", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 vim.keymap.set("i", "<C-e>", "<C-]>", { desc = "Expand abbreviation" })
