@@ -13,7 +13,7 @@ in
   imports = [ ../modulesHm/default.nix ];
   bd.gui.enable = false;
 
-  ft.bash.TSPATH = "~/repo/:/etc/nixos";
+  ft.bash.TSPATH = "~/tno-gitlab/:/etc/nixos";
   ft.tmux.main = true;
 
   ft.ncspot.enable = false;
