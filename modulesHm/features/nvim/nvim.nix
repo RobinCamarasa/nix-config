@@ -43,6 +43,7 @@ in
         # Rust
         rust-analyzer
         rustfmt
+        lldb_18
 
         # go
         gopls
