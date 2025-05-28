@@ -38,9 +38,69 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
   environment.systemPackages = with pkgs; [
-    vim
-    git
+    # CLI
+    ## Essentials
+    wget
+    html-xml-utils
+    gparted
+    dust
+    tldr
+    fzf
+    man-pages
+    ## Parsing
+    jq
+    yq
+    ## Other
+    qrencode
+    pandoc
+    poppler_utils
+
+    # TUI
+    btop
+    presenterm
+    k9s
+
+    # GUI
+    ## Design
+    inkscape-with-extensions
+    gimp
+    ## Media
+    sxiv
+    zathura
+
+    # Dev
+    ## Tools
+    gh
+    glab
+    kubectl
+    ## C
     gnumake
+    gcc
+    gdb
+    ## Dhall
+    dhall
+    dhall-json
+    dhall-yaml
+    ## Java
+    jdk8
+    ## Go
+    go
+    ## Rust
+    cargo
+    cargo-watch
+    rustup
+    rust-analyzer
+    ## Haskell
+    ghc
+    ## Python
+    poetry
+    stdenv.cc.cc.lib
+    zlib # numpy
+    python3
+    ## Latex
+    texliveFull
+    ## js
+    bun
   ];
 
   # Set user
@@ -74,6 +134,8 @@
       packages = with pkgs; [ ];
     };
   };
+
+  virtualisation.docker.enable = true;
 
   home-manager = {
     extraSpecialArgs = {
