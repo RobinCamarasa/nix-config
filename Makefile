@@ -10,3 +10,6 @@ test:
 
 clean:
 	nix-collect-garbage --delete-older-than 2d
+
+update:
+	nix flake update
