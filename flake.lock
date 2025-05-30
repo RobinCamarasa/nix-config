@@ -59,62 +59,11 @@
         "type": "github"
       }
     },
-    "plugin-fidget": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1738817426,
-        "narHash": "sha256-AFUx/ZQVWV7s5Wlppjk6N9QXoJKNKqxtf990FFlTEhw=",
-        "owner": "j-hui",
-        "repo": "fidget.nvim",
-        "rev": "d9ba6b7bfe29b3119a610892af67602641da778e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "j-hui",
-        "repo": "fidget.nvim",
-        "type": "github"
-      }
-    },
-    "plugin-gitsigns": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1748532691,
-        "narHash": "sha256-WYHetMwxyzcAuF8m0jhueWWRrPScaED4Oezo6blt3VE=",
-        "owner": "lewis6991",
-        "repo": "gitsigns.nvim",
-        "rev": "8bdaccdb897945a3c99c1ad8df94db0ddf5c8790",
-        "type": "github"
-      },
-      "original": {
-        "owner": "lewis6991",
-        "repo": "gitsigns.nvim",
-        "type": "github"
-      }
-    },
-    "plugin-kubectlnvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1742628610,
-        "narHash": "sha256-kX04bZEO2eb1BIH4LxLY90M8gdZmYnKzbpouneF2B2s=",
-        "owner": "Ramilito",
-        "repo": "kubectl.nvim",
-        "rev": "47e8d739c5016809a16eb760a02812eddee9f763",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Ramilito",
-        "repo": "kubectl.nvim",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs",
-        "plugin-fidget": "plugin-fidget",
-        "plugin-gitsigns": "plugin-gitsigns",
-        "plugin-kubectlnvim": "plugin-kubectlnvim"
+        "nixpkgs": "nixpkgs"
       }
     }
   },

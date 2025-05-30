@@ -15,12 +15,6 @@ in
   config = lib.mkIf config.ft.nvim.enable {
     home.packages = [ (pkgs.writeShellScriptBin "vimclip" (builtins.readFile ./sh/vimclip.sh)) ];
 
-    nixpkgs.overlays = [
-      (hlp.vim.makeOverlay [
-        "gitsigns"
-        "whichkey"
-      ])
-    ];
     programs.neovim = {
       enable = true;
       viAlias = true;
@@ -55,6 +49,11 @@ in
         isort
         black
 
+        # Haskell
+        ormolu
+        haskell-language-server
+
+        # other
         xclip
         wl-clipboard
         ripgrep
@@ -122,7 +121,7 @@ in
           config = hlp.vim.toLuaFile ./plugins/nvim-oil.lua;
         }
         {
-          plugin = own-gitsigns;
+          plugin = gitsigns-nvim;
           config = hlp.vim.toLuaFile ./plugins/gitsigns.lua;
         }
         {
@@ -143,6 +142,8 @@ in
               p.tree-sitter-roc
               p.tree-sitter-dhall
               p.tree-sitter-go
+              p.tree-sitter-c
+              p.tree-sitter-haskell
             ])
           );
           config = hlp.vim.toLuaFile ./plugins/nvim-treesitter.lua;

@@ -8,20 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Vim plugins
-    plugin-kubectlnvim = {
-      url = "github:Ramilito/kubectl.nvim";
-      flake = false;
-    };
-    plugin-gitsigns = {
-      url = "github:lewis6991/gitsigns.nvim";
-      flake = false;
-    };
-    plugin-fidget = {
-      url = "github:j-hui/fidget.nvim";
-      flake = false;
-    };
-
     # Firefox addons
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";

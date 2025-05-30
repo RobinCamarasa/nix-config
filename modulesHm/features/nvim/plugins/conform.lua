@@ -10,5 +10,6 @@ require("conform").setup({
 		nix = { "nixfmt" },
 		rust = { "rustfmt" },
 		go = { "gofmt" },
+		haskell = { "ormolu" },
 	},
 })
