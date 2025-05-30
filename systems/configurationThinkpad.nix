@@ -178,8 +178,8 @@
     ghc
     ## Python
     poetry
-    stdenv.cc.cc.lib
-    zlib # numpy
+    # stdenv.cc.cc.lib
+    # zlib # numpy
     python3
     ## Latex
     texliveFull
@@ -206,7 +206,7 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 
   home-manager = {
     extraSpecialArgs = {
