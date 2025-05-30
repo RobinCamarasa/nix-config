@@ -2,18 +2,17 @@
   "nodes": {
     "firefox-addons": {
       "inputs": {
-        "flake-utils": "flake-utils",
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1732939398,
-        "narHash": "sha256-fz8GXwXgvRwFsKYb0TNungjbKv/KxpbMWFjWz/c0OlA=",
+        "lastModified": 1748491405,
+        "narHash": "sha256-kjHOCsU66vlEv0NIyrMYmg9DvUiLsEGkhxtPiYIdx5g=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "63e16a9448014071e78224afe0d6157a47fe4f2b",
+        "rev": "42b96163341bdb7934cf880307f166f0238038ab",
         "type": "gitlab"
       },
       "original": {
@@ -21,21 +20,6 @@
         "owner": "rycee",
         "repo": "nur-expressions",
         "type": "gitlab"
-      }
-    },
-    "flake-utils": {
-      "locked": {
-        "lastModified": 1629284811,
-        "narHash": "sha256-JHgasjPR0/J1J3DRm4KxM4zTyAj4IOJY8vIl75v/kPI=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "c5d161cc0af116a2e17f54316f0bf43f0819785c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
       }
     },
     "home-manager": {
@@ -45,31 +29,32 @@
         ]
       },
       "locked": {
-        "lastModified": 1732884235,
-        "narHash": "sha256-r8j6R3nrvwbT1aUp4EPQ1KC7gm0pu9VcV1aNaB+XG6Q=",
+        "lastModified": 1748487945,
+        "narHash": "sha256-e9zc/rHdoH9i+sFFhhQiKoF6IuD+T2rB/nUyPaO7CCg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "819f682269f4e002884702b87e445c82840c68f2",
+        "rev": "0d13ea58d565d3c1c1468ddae1f623316dc395d9",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
+        "ref": "release-25.05",
         "repo": "home-manager",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1732837521,
-        "narHash": "sha256-jNRNr49UiuIwaarqijgdTR2qLPifxsVhlJrKzQ8XUIE=",
+        "lastModified": 1748437600,
+        "narHash": "sha256-hYKMs3ilp09anGO7xzfGs3JqEgUqFMnZ8GMAqI6/k04=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "970e93b9f82e2a0f3675757eb0bfc73297cc6370",
+        "rev": "7282cb574e0607e65224d33be8241eae7cfe0979",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-unstable",
+        "ref": "nixos-25.05",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -77,11 +62,11 @@
     "plugin-fidget": {
       "flake": false,
       "locked": {
-        "lastModified": 1730221432,
-        "narHash": "sha256-fQBrkHV54TaOeLYQJ1DE+lr7SFDPN1yqSlzhFm26NAY=",
+        "lastModified": 1738817426,
+        "narHash": "sha256-AFUx/ZQVWV7s5Wlppjk6N9QXoJKNKqxtf990FFlTEhw=",
         "owner": "j-hui",
         "repo": "fidget.nvim",
-        "rev": "e2a175c2abe2d4f65357da1c98c59a5cfb2b543f",
+        "rev": "d9ba6b7bfe29b3119a610892af67602641da778e",
         "type": "github"
       },
       "original": {
@@ -93,11 +78,11 @@
     "plugin-gitsigns": {
       "flake": false,
       "locked": {
-        "lastModified": 1732361574,
-        "narHash": "sha256-H7A+AxioiedSuC+jqRwP4c7DjZR/0j4o/fTUasT2urc=",
+        "lastModified": 1748532691,
+        "narHash": "sha256-WYHetMwxyzcAuF8m0jhueWWRrPScaED4Oezo6blt3VE=",
         "owner": "lewis6991",
         "repo": "gitsigns.nvim",
-        "rev": "5f808b5e4fef30bd8aca1b803b4e555da07fc412",
+        "rev": "8bdaccdb897945a3c99c1ad8df94db0ddf5c8790",
         "type": "github"
       },
       "original": {
@@ -109,32 +94,16 @@
     "plugin-kubectlnvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1732712869,
-        "narHash": "sha256-LNzMDHA2X3xzG4aIqFLoL62zJmlw9LWO/n/Fv2lKotY=",
+        "lastModified": 1742628610,
+        "narHash": "sha256-kX04bZEO2eb1BIH4LxLY90M8gdZmYnKzbpouneF2B2s=",
         "owner": "Ramilito",
         "repo": "kubectl.nvim",
-        "rev": "1e7f0288e315cc2e7f3146f01c34c313b4e27c78",
+        "rev": "47e8d739c5016809a16eb760a02812eddee9f763",
         "type": "github"
       },
       "original": {
         "owner": "Ramilito",
         "repo": "kubectl.nvim",
-        "type": "github"
-      }
-    },
-    "plugin-whichkey": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1732804356,
-        "narHash": "sha256-55RmbdN0rNG8946eIMFd5BlN82eY1GKqmHdUiC7BP+U=",
-        "owner": "folke",
-        "repo": "which-key.nvim",
-        "rev": "9b365a6428a9633e3eeb34dbef1b791511c54f70",
-        "type": "github"
-      },
-      "original": {
-        "owner": "folke",
-        "repo": "which-key.nvim",
         "type": "github"
       }
     },
@@ -145,8 +114,7 @@
         "nixpkgs": "nixpkgs",
         "plugin-fidget": "plugin-fidget",
         "plugin-gitsigns": "plugin-gitsigns",
-        "plugin-kubectlnvim": "plugin-kubectlnvim",
-        "plugin-whichkey": "plugin-whichkey"
+        "plugin-kubectlnvim": "plugin-kubectlnvim"
       }
     }
   },

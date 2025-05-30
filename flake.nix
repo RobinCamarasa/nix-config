@@ -2,9 +2,9 @@
   description = "Nixos config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -15,10 +15,6 @@
     };
     plugin-gitsigns = {
       url = "github:lewis6991/gitsigns.nvim";
-      flake = false;
-    };
-    plugin-whichkey = {
-      url = "github:folke/which-key.nvim";
       flake = false;
     };
     plugin-fidget = {

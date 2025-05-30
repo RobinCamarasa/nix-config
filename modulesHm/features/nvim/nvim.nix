@@ -64,7 +64,7 @@ in
       '';
       plugins = with pkgs.vimPlugins; [
         {
-          plugin = own-whichkey;
+          plugin = which-key-nvim;
           config = hlp.vim.toLuaFile ./plugins/which-key.lua;
         }
         {
