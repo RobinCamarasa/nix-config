@@ -156,7 +156,6 @@
     ## Tools
     gh
     glab
-    kubectl
     ## C
     gnumake
     gcc
@@ -176,6 +175,7 @@
     rust-analyzer
     ## Haskell
     ghc
+    haskellPackages.hoogle
     ## Python
     poetry
     python3

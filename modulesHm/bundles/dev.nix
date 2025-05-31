@@ -16,6 +16,9 @@
     ../features/git.nix
     ../features/bash.nix
     ../features/zoxide.nix
+
+    # homebrewed
+    ../homebrewed-features/kubectl.nix
   ];
   options = {
     bd.dev.enable = lib.mkEnableOption "enables dev";
@@ -31,5 +34,8 @@
     ft.bash.enable = lib.mkDefault config.bd.dev.enable;
     ft.zoxide.enable = lib.mkDefault config.bd.dev.enable;
     ft.atuin.enable = lib.mkDefault config.bd.dev.enable;
+
+    # homebrewed
+    ft.kubectl.enable = lib.mkDefault config.bd.dev.enable;
   };
 }
