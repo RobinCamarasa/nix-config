@@ -44,7 +44,7 @@ in
         delve
 
         # Python
-        pyright
+        basedpyright
         stylua
         isort
         black
@@ -88,6 +88,7 @@ in
         nvim-dap-ui
         nvim-dap-virtual-text
         nvim-dap-go
+        nvim-dap-python
         {
           plugin = nvim-dap;
           config = hlp.vim.toLuaFile ./plugins/nvim-dap.lua;

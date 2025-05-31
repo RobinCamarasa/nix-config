@@ -176,7 +176,13 @@
     haskellPackages.hoogle
     ## Python
     poetry
-    python3
+    (python312.withPackages (
+      ps: with ps; [
+        debugpy
+        numpy
+        matplotlib
+      ]
+    ))
     ## Latex
     texliveFull
     ## js

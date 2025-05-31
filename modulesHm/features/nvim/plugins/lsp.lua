@@ -32,7 +32,7 @@ require("lspconfig").lua_ls.setup({
 	cmd = { "lua-lsp" },
 })
 
-require("lspconfig").pyright.setup({
+require("lspconfig").basedpyright.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
