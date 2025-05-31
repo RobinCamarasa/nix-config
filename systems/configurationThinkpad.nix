@@ -134,7 +134,6 @@
     # TUI
     btop
     presenterm
-    k9s
 
     # GUI
     ## Clipboard

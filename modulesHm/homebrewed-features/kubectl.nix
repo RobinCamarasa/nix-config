@@ -19,6 +19,7 @@
     home.packages = lib.mkIf config.ft.kubectl.enable [
       pkgs.kubectl
       pkgs.kubectx
+      pkgs.k9s
     ];
 
     programs.bash.bashrcExtra = lib.mkIf (config.ft.kubectl.enable && config.ft.bash.enable) (
