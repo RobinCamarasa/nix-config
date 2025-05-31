@@ -142,7 +142,6 @@
     ## Documents
     libreoffice-qt
     ## Design
-    inkscape-with-extensions
     gimp
     ## Media
     vlc
