@@ -57,6 +57,7 @@ in
         xclip
         wl-clipboard
         ripgrep
+        fd
       ];
       extraLuaConfig = ''
         ${builtins.readFile ./vim-basic.lua}

@@ -172,7 +172,10 @@
     rustup
     rust-analyzer
     ## Haskell
-    ghc
+    (haskellPackages.ghcWithPackages (ps: [
+      ps.random
+      ps.random-shuffle
+    ]))
     haskellPackages.hoogle
     ## Python
     poetry
