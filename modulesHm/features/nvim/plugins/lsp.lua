@@ -37,11 +37,6 @@ require("lspconfig").basedpyright.setup({
 	capabilities = capabilities,
 })
 
-require("lspconfig").htmx.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
 require("lspconfig").rust_analyzer.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -72,4 +67,27 @@ require("lspconfig").gopls.setup({
 require("lspconfig").hls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
+})
+
+local vue_ls_path = vim.fn.resolve(vim.fn.exepath("vue-language-server"))
+vue_ls_path = vim.fn.fnamemodify(vue_ls_path, ":h:h") .. "/lib/node_modules/@vue/language-server"
+
+require("lspconfig").ts_ls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+
+	init_options = {
+		plugins = {
+			{
+				name = "@vue/typescript-plugin",
+				location = vue_ls_path,
+				languages = { "vue" },
+			},
+		},
+	},
+	filetypes = {
+		"javascript",
+		"typescript",
+		"vue",
+	},
 })

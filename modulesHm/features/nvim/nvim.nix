@@ -24,9 +24,6 @@ in
         # dhall
         dhall-lsp-server
 
-        # htmx
-        htmx-lsp
-
         # Nix
         nixfmt-rfc-style
         nixd
@@ -52,6 +49,13 @@ in
         # Haskell
         ormolu
         haskell-language-server
+
+        # typescript
+        typescript
+        typescript-language-server
+
+        # vue
+        vue-language-server
 
         # other
         xclip
@@ -146,6 +150,8 @@ in
               p.tree-sitter-go
               p.tree-sitter-c
               p.tree-sitter-haskell
+              p.tree-sitter-typescript
+              p.tree-sitter-vue
             ])
           );
           config = hlp.vim.toLuaFile ./plugins/nvim-treesitter.lua;
