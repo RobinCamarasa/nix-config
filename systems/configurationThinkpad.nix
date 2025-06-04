@@ -177,6 +177,7 @@
       ps.random-shuffle
     ]))
     haskellPackages.hoogle
+    haskellPackages.cabal-install
     ## Python
     poetry
     (python312.withPackages (
