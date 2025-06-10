@@ -41,10 +41,15 @@ This is my personal, flake-based NixOS and Home Manager configuration, tailored 
 
 > Prerequisites: Nix flakes enabled.
 
+- Create an envrc with the name of the host as for example:
+```bash
+export NIXHOST="thinkpad"
+```
+
 - Test system config:
 
 ```bash
-sudo make test ENV=default # change default to the host you want to build
+make test ENV=default # change default to the host you want to build
 ```
 
 - Build & apply system config:

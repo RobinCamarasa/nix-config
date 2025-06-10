@@ -18,7 +18,7 @@
   outputs =
     { self, nixpkgs, ... }@inputs:
     {
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs;
         };
