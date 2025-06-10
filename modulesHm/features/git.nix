@@ -27,7 +27,7 @@
       aliases = {
         lg = "log --graph --all";
         rmt = "remote -v";
-        url = "!f() { git remote -v | head -n1 | awk '{print $2}' | sed  -e 's#\.git$##g' -e 's#:#/#g' -e 's#^git@#https://#' | head -n1 | tee >(wl-copy); }; f";
+        url = "!f() { git remote -v | head -n1 | awk '{print $2}' | sed  -e 's#\.git$##g' -e 's#:#/#g' -e 's#^git@#https://#' -e 's#ci.tno.nl#ci.tno.nl/gitlab#'| head -n1 | tee >(wl-copy); }; f";
       };
       extraConfig = {
         push.autoSetupRemote = true;
