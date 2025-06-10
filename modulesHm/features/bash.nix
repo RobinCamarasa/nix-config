@@ -23,6 +23,7 @@
         clear
         export TSPATH="${config.ft.bash.TSPATH}"
         export PAGER='nvim +Man!'
+        export EDITOR='nvim'
       '';
       shellAliases = {
         svi = "sudo -E -s nvim";
