@@ -1,15 +1,15 @@
 .PHONY: rebuild test
 
-ENV=default
+NIXHOST := $(shell echo $$NIXHOST)
 
 rebuild:
-	nixos-rebuild switch --flake /etc/nixos#$(ENV) --impure
+	sudo nixos-rebuild switch --flake /etc/nixos#$(NIXHOST) --impure
 
 test:
-	nixos-rebuild test --flake /etc/nixos#$(ENV) --impure
+	sudo nixos-rebuild test --flake /etc/nixos#$(NIXHOST) --impure
 
 clean:
-	nix-collect-garbage --delete-older-than 2d
+	sudo nix-collect-garbage --delete-older-than 2d
 
 update:
-	nix flake update
+	sudo nix flake update
