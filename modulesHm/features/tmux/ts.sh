@@ -11,7 +11,7 @@ if [[ $# -eq 1 ]]
 then
     folder="${1}"
 else
-    folder=$(find $(split_path ${TSPATH}) -name '.git' -type d | fzf | sed -e 's/\.git$//g')
+    folder=$(find $(split_path ${TSPATH}) -maxdepth 2 -name '.git' -type d | fzf | sed -e 's/\.git$//g')
 fi
 
 if [[ -z $folder ]]; then
