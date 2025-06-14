@@ -20,6 +20,24 @@
         "org/gnome/shell/app-switcher" = {
           current-workspace-only = true;
         };
+
+        "org/gnome/desktop/peripherals/pointingstick" = {
+          accel-profile = "adaptive";
+          speed = 0.6;
+        };
+
+        "org/gnome/desktop/peripherals/mouse" = {
+          accel-profile = "adaptive";
+          speed = 0.6;
+          click-method = "areas";
+        };
+
+        "org.gnome.desktop.peripherals.touchpad" = {
+          accel-profile = "adaptive";
+          speed = 0.6;
+          click-method = "areas";
+        };
+
         "org/gnome/settings-daemon/plugins/media-keys" = {
           custom-keybindings = [
             "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
