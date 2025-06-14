@@ -27,11 +27,13 @@ vim.opt.exrc = true
 
 -- [[ Vim extension Keymaps ]]
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("i", "kj", "<Esc><cmd>nohlsearch<CR>")
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("t", "kj", "<C-\\><C-n>")
 
 vim.keymap.set("n", "<leader>gc", "<CMD>Git commit<CR>", { desc = "[g]it [c]ommit" })
 vim.keymap.set("n", "<leader>ga", "<CMD>Git add %<CR>", { desc = "[g]it [a]dd current buffer" })
