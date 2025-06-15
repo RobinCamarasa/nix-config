@@ -13,7 +13,7 @@
     ../features/direnv.nix
     ../features/nvim/nvim.nix
     ../features/tmux/tmux.nix
-    ../features/git.nix
+    ../features/git/git.nix
     ../features/bash.nix
     ../features/zoxide.nix
 

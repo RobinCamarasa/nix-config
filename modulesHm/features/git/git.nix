@@ -19,6 +19,9 @@
     };
   };
   config = {
+    home.packages = lib.mkIf config.ft.tmux.enable [
+      (pkgs.writers.writeBashBin "newgit" { } (builtins.readFile ./newgit.sh))
+    ];
     programs.git = lib.mkIf config.ft.git.enable {
       enable = true;
       userEmail = config.ft.git.userEmail;

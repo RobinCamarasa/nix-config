@@ -11,7 +11,8 @@ in
   home = hlp.main.makeHome { username = "robincamarasa"; };
 
   imports = [ ../modulesHm/default.nix ];
-  ft.bash.TSPATH = "~/repo/:/etc/nixos";
+  ft.bash.TSPATH = "${config.home.homeDirectory}/repo/:/etc/nixos";
+  ft.bash.NGPATH = "${config.home.homeDirectory}/repo/";
   ft.tmux.main = true;
 
   ft.ncspot.enable = false;

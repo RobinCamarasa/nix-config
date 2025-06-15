@@ -12,6 +12,11 @@
       type = pkgs.lib.types.str;
       description = "set TSPATH variable";
     };
+    ft.bash.NGPATH = lib.mkOption {
+      default = "";
+      type = pkgs.lib.types.str;
+      description = "set NGPATH variable";
+    };
   };
   config = {
     home.packages = lib.mkIf config.ft.bash.enable [ pkgs.neofetch ];
@@ -22,6 +27,7 @@
         export PATH="$HOME/.local/bin:$PATH:./"
         clear
         export TSPATH="${config.ft.bash.TSPATH}"
+        export NGPATH="${config.ft.bash.NGPATH}"
         export PAGER='nvim +Man!'
         export EDITOR='nvim'
       '';
