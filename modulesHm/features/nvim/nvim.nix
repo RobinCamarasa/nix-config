@@ -157,6 +157,11 @@ in
           config = hlp.vim.toLuaFile ./plugins/nvim-treesitter.lua;
         }
         plenary-nvim
+
+        {
+          plugin = orgmode;
+          config = hlp.vim.toLuaFile ./plugins/nvim-orgmode.lua;
+        }
       ];
     };
   };

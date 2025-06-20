@@ -12,7 +12,6 @@ test "${1}" == "help" && ${EDITOR} -R $(realpath ${0}) && exit 0
 
 # Get project
 PROJECT="$(cat ${SHARE_PRJ_FILE} | fzf --print-query | tail -n 1)"
-echo "${PROJECT}"
 
 # Update the project list
 echo ${PROJECT} >> ${SHARE_PRJ_FILE}
