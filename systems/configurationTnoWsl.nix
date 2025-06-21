@@ -122,6 +122,7 @@
       description = "camarasaryr";
       extraGroups = [
         "wheel"
+        "docker"
       ];
       packages = with pkgs; [ ];
     };
