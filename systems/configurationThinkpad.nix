@@ -175,6 +175,7 @@
     (haskellPackages.ghcWithPackages (ps: [
       ps.random
       ps.random-shuffle
+      ps.QuickCheck
     ]))
     haskellPackages.hoogle
     haskellPackages.cabal-install
