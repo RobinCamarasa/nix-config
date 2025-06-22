@@ -15,6 +15,12 @@ in
   config = lib.mkIf config.ft.nvim.enable {
     home.packages = [ (pkgs.writeShellScriptBin "vimclip" (builtins.readFile ./sh/vimclip.sh)) ];
 
+    programs.bash.shellAliases = lib.mkIf (config.ft.bash.enable) (
+      lib.mkAfter {
+        org = "nvim -c OrgOpenFolder";
+      }
+    );
+
     programs.neovim = {
       enable = true;
       viAlias = true;

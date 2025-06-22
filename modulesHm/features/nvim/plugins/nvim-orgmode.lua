@@ -41,9 +41,8 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_user_command("OrgOpenFolder", function()
-	vim.cmd("tabnew") -- open new tab
-	vim.cmd("cd " .. agenda_path) -- set working directory
-	vim.cmd("Oil " .. agenda_path) -- open oil.nvim explorer there
+	vim.cmd("lcd " .. agenda_path)
+	vim.cmd("Oil " .. agenda_path)
 end, { desc = "Open org agenda folder in new tab with oil.nvim" })
 
-vim.keymap.set("n", "<leader>ol", ":OrgOpenFolder<CR>", { desc = "Open org agenda folder (oil.nvim)" })
+vim.keymap.set("n", "<leader>ol", ":tabnew<CR>:OrgOpenFolder<CR>", { desc = "Open org agenda folder" })

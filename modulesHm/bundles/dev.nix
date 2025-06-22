@@ -19,7 +19,6 @@
 
     # homebrewed
     ../homebrewed-features/kubectl.nix
-    ../homebrewed-features/scripts/scripts.nix
   ];
   options = {
     bd.dev.enable = lib.mkEnableOption "enables dev";
@@ -38,6 +37,5 @@
 
     # homebrewed
     ft.kubectl.enable = lib.mkDefault config.bd.dev.enable;
-    ft.scripts.enable = lib.mkDefault config.bd.dev.enable;
   };
 }
