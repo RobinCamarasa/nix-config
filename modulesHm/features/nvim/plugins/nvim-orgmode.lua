@@ -1,5 +1,35 @@
-local agenda_path = vim.fn.expand("~/.local/share/nvim-org/")
-local _ = vim.fn.system("mkdir -p " .. agenda_path)
+local uv = vim.loop
+
+local remote = os.getenv("ORG_REMOTE")
+local mountpoint = os.getenv("ORG_MOUNTPOINT") or vim.fn.expand("~/.local/share/nvim-org")
+
+if remote then
+	os.execute("mkdir -p " .. mountpoint)
+
+	local function is_mounted(path)
+		local result = os.execute("mountpoint -q " .. path)
+		return result == true or result == 0
+	end
+
+	if not is_mounted(mountpoint) then
+		local cmd = string.format("sshfs %s %s -o reconnect", remote, mountpoint)
+		uv.spawn("sh", { args = { "-c", cmd } }, function(code)
+			if code == 0 then
+				print("[sshfs] Mounted " .. remote .. " at " .. mountpoint)
+			else
+				print("[sshfs] Failed to mount " .. remote .. " at " .. mountpoint)
+			end
+		end)
+	else
+		print("[sshfs] Already mounted at " .. mountpoint)
+	end
+else
+	print("[sshfs] ORG_REMOTE not set, skipping sshfs mount")
+end
+
+local agenda_path = mountpoint .. "/"
+
+-- Proceed with orgmode setup using agenda_path as usual
 
 require("orgmode").setup({
 	org_agenda_files = { agenda_path .. "*.org" },

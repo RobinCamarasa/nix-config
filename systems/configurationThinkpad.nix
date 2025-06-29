@@ -115,6 +115,7 @@
 
     # CLI
     ## Essentials
+    sshfs
     wget
     html-xml-utils
     gparted
