@@ -101,6 +101,8 @@
     texliveFull
     ## js
     bun
+    ## sql
+    postgresql
   ];
 
   # Set user
