@@ -33,6 +33,10 @@
             ''
               bind-key -n M-l next-window
               bind-key -n M-h previous-window
+              bind -r h select-pane -L
+              bind -r j select-pane -D
+              bind -r k select-pane -U
+              bind -r l select-pane -R
               set-option -g status-style bg="#088585"
             ''
           else
