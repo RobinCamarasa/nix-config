@@ -163,7 +163,10 @@ in
           config = hlp.vim.toLuaFile ./plugins/nvim-treesitter.lua;
         }
         plenary-nvim
-
+        {
+          plugin = undotree;
+          config = hlp.vim.toLuaFile ./plugins/undotree.lua;
+        }
         {
           plugin = orgmode;
           config = hlp.vim.toLuaFile ./plugins/nvim-orgmode.lua;
