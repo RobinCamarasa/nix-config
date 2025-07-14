@@ -55,6 +55,7 @@ vim.cmd([[
 
 -- Define a highlight group for DOING
 vim.api.nvim_set_hl(0, "OrgKeywordDoing", { fg = "#fab387", bold = true })
+vim.api.nvim_set_hl(0, "@org.agenda.scheduled", { fg = "#7aa2f7" })
 
 -- Match the word 'DOING' in Org files and apply the group
 vim.api.nvim_create_autocmd("FileType", {
