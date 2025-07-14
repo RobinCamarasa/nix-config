@@ -54,6 +54,9 @@
     qrencode
     pandoc
     poppler_utils
+    pre-commit
+    rustfmt
+    kubernetes-helm
 
     # TUI
     btop
