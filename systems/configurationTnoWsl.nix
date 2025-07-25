@@ -57,6 +57,7 @@
     pre-commit
     rustfmt
     kubernetes-helm
+    sshfs
 
     # TUI
     btop
