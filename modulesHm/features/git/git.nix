@@ -26,7 +26,10 @@
       enable = true;
       userEmail = config.ft.git.userEmail;
       userName = config.ft.git.userName;
-      ignores = [ ".envrc" ];
+      ignores = [
+        ".envrc"
+        ".tmux.sh"
+      ];
       aliases = {
         lg = "log --graph --all";
         rmt = "remote -v";

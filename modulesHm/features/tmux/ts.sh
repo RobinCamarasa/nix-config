@@ -23,6 +23,10 @@ selected_name=$(basename "$folder" | tr . _)
 if ! tmux has-session -t=$selected_name 2> /dev/null
 then
     tmux -u new-session -ds $selected_name -c $folder
+
+    if [[ -f "$folder/.tmux.sh" ]]; then
+        tmux send-keys -t $selected_name "./.tmux.sh" C-m
+    fi
 fi
 
 if [[ -z $TMUX ]]
