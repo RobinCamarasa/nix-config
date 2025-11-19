@@ -41,6 +41,10 @@
     LC_TIME = "nl_NL.UTF-8";
   };
 
+  services.xrdp.enable = true;
+  services.xrdp.defaultWindowManager = "${pkgs.gnome-session}/bin/gnome-session";
+  services.xrdp.openFirewall = true;
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.ollama.enable = true;
