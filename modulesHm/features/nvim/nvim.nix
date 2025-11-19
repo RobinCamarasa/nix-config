@@ -73,10 +73,17 @@ in
         ${builtins.readFile ./vim-basic.lua}
       '';
       plugins = with pkgs.vimPlugins; [
+        luasnip
+        {
+          plugin = friendly-snippets;
+          config = hlp.vim.toLuaFile ./plugins/nvim-friendly-snippet.lua;
+        }
         {
           plugin = which-key-nvim;
           config = hlp.vim.toLuaFile ./plugins/which-key.lua;
         }
+
+        cmp_luasnip
         {
           plugin = nvim-cmp;
           config = hlp.vim.toLuaFile ./plugins/nvim-cmp.lua;
