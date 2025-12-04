@@ -55,6 +55,14 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+vim.api.nvim_create_autocmd("BufWritePre", {
+	group = vim.api.nvim_create_augroup("windows-remove-trailing-newline", { clear = true }),
+	pattern = { "*" },
+	callback = function()
+		vim.cmd([[silent! %s/\r//g]])
+	end,
+})
+
 --[[ Filetype ]]
 vim.cmd([[autocmd! BufRead,BufNewFile *.puml set filetype=puml]])
 
