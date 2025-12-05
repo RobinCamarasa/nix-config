@@ -133,12 +133,13 @@
     qrencode
     pandoc
     poppler_utils
-    ## Services
-    tailscale
 
     # TUI
     btop
     presenterm
+
+    # Network
+    wireguard-tools
 
     # GUI
     ## Clipboard
@@ -210,7 +211,6 @@
 
   virtualisation.docker.enable = true;
   services.openssh.enable = true;
-  services.tailscale.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

@@ -1,6 +1,7 @@
 .PHONY: rebuild test
 
-NIXHOST := $(shell echo $$NIXHOST)
+# NIXHOST := $(shell echo $$NIXHOST)
+NIXHOST = undefined
 
 rebuild:
 	sudo nixos-rebuild switch --flake /etc/nixos#$(NIXHOST) --impure

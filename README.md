@@ -49,19 +49,19 @@ export NIXHOST="thinkpad"
 - Test system config:
 
 ```bash
-make test ENV=default # change default to the host you want to build
+make -e test
 ```
 
 - Build & apply system config:
 
 ```bash
-sudo make rebuild ENV=default # change default to the host you want to build
+make -e rebuild
 ```
 
 - Clean system:
 
 ```bash
-sudo make clean
+make -e clean
 ```
 
 > Note that some part of the configuration require GPG keys and ssh keys unavailable in this repository for obvious security reasons
